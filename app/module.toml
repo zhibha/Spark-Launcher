@@ -1,0 +1,62 @@
+version = 2
+
+[module]
+type = "android-app"
+name = "app"
+languageLevel = "JAVA_8"
+output = "build/classes"
+
+[sourceSets.androidTest]
+scope = "TEST_IMPLEMENTATION"
+java = ["src/androidTest/java", "src/androidTest/kotlin"]
+resources = ["src/androidTest/resources"]
+
+[sourceSets.debug]
+scope = "IMPLEMENTATION"
+aidl = ["src/debug/aidl"]
+assets = ["src/debug/assets"]
+java = ["src/debug/java", "src/debug/kotlin"]
+jniLibs = ["src/debug/jniLibs"]
+res = ["src/debug/res"]
+resources = ["src/debug/resources"]
+
+[sourceSets.main]
+scope = "IMPLEMENTATION"
+aidl = ["src/main/aidl"]
+assets = ["src/main/assets"]
+java = ["src/main/java", "src/main/kotlin"]
+jniLibs = ["src/main/jniLibs"]
+res = ["src/main/res"]
+resources = ["src/main/resources"]
+
+[sourceSets.release]
+scope = "IMPLEMENTATION"
+aidl = ["src/release/aidl"]
+assets = ["src/release/assets"]
+java = ["src/release/java", "src/release/kotlin"]
+jniLibs = ["src/release/jniLibs"]
+res = ["src/release/res"]
+resources = ["src/release/resources"]
+
+[sourceSets.test]
+scope = "TEST_IMPLEMENTATION"
+java = ["src/test/java", "src/test/kotlin"]
+resources = ["src/test/resources"]
+
+[dependencies]
+implementation = ["androidx.activity:activity-compose:1.13.0", "androidx.compose.ui:ui:1.11.2", "androidx.compose.foundation:foundation:1.11.2", "androidx.compose.material3:material3:1.4.0", "androidx.compose.ui:ui-tooling-preview:1.11.2", "kotlin-stdlib"]
+
+[android]
+namespace = "com.spark.launcher"
+compileSdk = 36
+minSdk = 28
+targetSdk = 34
+manifest = "src/main/AndroidManifest.xml"
+versionCode = 1
+versionName = "1.0"
+isApplication = true
+manifestPlaceholders = []
+buildConfigFields = []
+buildTypes = [{ name = "debug", debuggable = true, minifyEnabled = false, shrinkResources = false }, { name = "release", debuggable = false, minifyEnabled = false, shrinkResources = false, proguardFiles = ["proguard-android-optimize.txt", "proguard-rules.pro"] }]
+compose = true
+buildConfig = false
