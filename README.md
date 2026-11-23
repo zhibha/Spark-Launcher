@@ -36,7 +36,6 @@ Join our official Discord community to chat with other players and the developer
 
 Spark Launcher stands on the shoulders of giants. We would like to express our deep gratitude to these amazing projects and communities that paved the way for Minecraft on mobile:
 
-- **PCL2** (Plain Craft Launcher 2)
 - **ZL2** (Zalith Launcher 2)
 - **FCL** (Fold Craft Launcher)
 - **PojavLauncher**
